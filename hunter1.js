@@ -1,9 +1,16 @@
-var removeDuplicate = (arrArg) => {
-    return arrArg.filter((elem, pos, arr) => {
-      return arr.indexOf(elem) == pos;
-    });
-  };
+var removeDuplicate = () => {
+  let test = [];
+  let length = prompt("Enter the length");
+  length = Number(length);
+  for (let i = 1; i <= length; i++) {
+    let temp = prompt("enter the numbers");
+    test.push(temp);
+  }
+  let arr = test.filter((elem, pos, arr) => {
+    return arr.indexOf(elem) == pos;
+  });
+  arr.sort();
+  console.log(arr);
+};
 
-  let test = [2,3,5,3,2,7];
-  removeDuplicate(test);
-
+removeDuplicate();
